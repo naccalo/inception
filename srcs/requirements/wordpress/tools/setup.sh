@@ -47,10 +47,10 @@ if [ ! -f wp-config.php ]; then
         --allow-root
 fi
 
-wp config set DB_NAME "$DB_NAME" --type=constant --allow-root
-wp config set DB_USER "$DB_USER" --type=constant --allow-root
-wp config set DB_PASSWORD "$DB_PASSWORD" --type=constant --allow-root
-wp config set DB_HOST "$DB_HOST" --type=constant --allow-root
+wp --quiet config set DB_NAME "$DB_NAME" --type=constant --allow-root
+wp --quiet config set DB_USER "$DB_USER" --type=constant --allow-root
+wp --quiet config set DB_PASSWORD "$DB_PASSWORD" --type=constant --allow-root
+wp --quiet config set DB_HOST "$DB_HOST" --type=constant --allow-root
 
 if ! wp core is-installed --allow-root >/dev/null 2>&1; then
 
