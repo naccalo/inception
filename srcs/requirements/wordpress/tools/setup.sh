@@ -30,11 +30,8 @@ try {
     exit(1);
 }
 '; do
-    echo "Waiting for MariaDB..."
     sleep 2
 done
-
-echo "MariaDB connection established!"
 
 if [ ! -f wp-config.php ]; then
     wp core download --allow-root
